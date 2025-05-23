@@ -1,0 +1,483 @@
+<html class="scroll-smooth" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Modern Portfolio
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-900 text-gray-100 transition-colors duration-700" id="body">
+  <!-- Navbar -->
+  <nav class="fixed w-full z-50 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 dark:from-gray-800 dark:via-gray-900 dark:to-black shadow-lg">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+     <a class="text-2xl font-bold text-white hover:text-pink-400 transition-colors" href="index.html">
+      <img style="height: 60px; width: 80px; border-radius: 30%; border-color: black; border: 2px solid black;" src="img/logo.png" alt="">
+     </a>
+     <div class="hidden md:flex space-x-6 items-center">
+      <a class="hover:text-pink-400 transition-colors font-medium" href="index.html#home">
+       Home
+      </a>
+      <a class="hover:text-pink-400 transition-colors font-medium" href="index.html#about">
+       About
+      </a>
+      <a class="hover:text-pink-400 transition-colors font-medium" href="frontend.html">
+       Frontend
+      </a>
+      <a class="hover:text-pink-400 transition-colors font-medium" href="uiux.html">
+       Ui&amp;Ux
+      </a>
+      <a class="hover:text-pink-400 transition-colors font-medium" href="graphic.html">
+       GraphicDesigner
+      </a>
+      <a class="hover:text-pink-400 transition-colors font-medium" href="index.html#contactus">
+       ContactUs
+      </a>
+      <a class="hover:text-pink-400 transition-colors font-medium" href="index.html#hireme">
+       Hire Me
+      </a>
+      <button aria-label="Toggle Dark Mode" class="ml-4 p-2 rounded-full bg-pink-600 hover:bg-pink-700 transition-colors text-white focus:outline-none focus:ring-2 focus:ring-pink-400" id="darkModeToggle">
+       <i class="fas fa-moon" id="darkModeIcon">
+       </i>
+      </button>
+     </div>
+     <!-- Mobile menu button -->
+     <div class="md:hidden flex items-center">
+      <button aria-label="Toggle Menu" class="text-white focus:outline-none focus:ring-2 focus:ring-pink-400" id="mobileMenuButton">
+       <i class="fas fa-bars fa-lg">
+       </i>
+      </button>
+     </div>
+    </div>
+   </div>
+   <!-- Mobile menu -->
+   <div class="hidden md:hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 dark:from-gray-800 dark:via-gray-900 dark:to-black" id="mobileMenu">
+    <a class="block px-4 py-3 border-b border-pink-700 hover:bg-pink-700 transition-colors" href="index.html#home">
+     Home
+    </a>
+    <a class="block px-4 py-3 border-b border-pink-700 hover:bg-pink-700 transition-colors" href="index.html#about">
+     About
+    </a>
+    <a class="block px-4 py-3 border-b border-pink-700 hover:bg-pink-700 transition-colors" href="frontend.html">
+     Frontend
+    </a>
+    <a class="block px-4 py-3 border-b border-pink-700 hover:bg-pink-700 transition-colors" href="uiux.html">
+     Ui&amp;Ux
+    </a>
+    <a class="block px-4 py-3 border-b border-pink-700 hover:bg-pink-700 transition-colors" href="graphic.html">
+     GraphicDesigner
+    </a>
+    <a class="block px-4 py-3 border-b border-pink-700 hover:bg-pink-700 transition-colors" href="index.html#contactus">
+     ContactUs
+    </a>
+    <a class="block px-4 py-3 border-b border-pink-700 hover:bg-pink-700 transition-colors" href="index.html#hireme">
+     Hire Me
+    </a>
+    <button aria-label="Toggle Dark Mode" class="w-full text-left px-4 py-3 hover:bg-pink-700 transition-colors text-white focus:outline-none focus:ring-2 focus:ring-pink-400" id="mobileDarkModeToggle">
+     <i class="fas fa-moon mr-2">
+     </i>
+     Dark Light
+    </button>
+   </div>
+  </nav>
+  <!-- New Slider Section -->
+  <section class="pt-20 min-h-[90vh] flex flex-col justify-center items-center bg-gradient-to-br from-indigo-800 via-purple-900 to-pink-900 dark:from-gray-900 dark:via-gray-800 dark:to-black relative overflow-hidden" id="home">
+   <div class="max-w-6xl w-full px-6 md:px-12">
+    <div class="relative overflow-hidden rounded-3xl shadow-2xl shadow-pink-600/50">
+     <div class="flex transition-transform duration-700 ease-in-out" id="sliderTrack" style="transform: translateX(0%)">
+      <div class="min-w-full flex-shrink-0 flex flex-col md:flex-row items-center bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 p-10 md:p-20 text-white">
+       <div class="md:w-1/2 text-center md:text-left space-y-6">
+        <h2 class="text-5xl font-extrabold tracking-tight">
+         Software Developer
+        </h2>
+        <p class="text-lg md:text-xl leading-relaxed">
+         Crafting beautiful and functional digital experiences with passion and creativity.
+        </p>
+        <a class="inline-block mt-4 px-8 py-3 rounded-full bg-pink-800 hover:bg-pink-900 transition-colors font-semibold shadow-lg shadow-pink-700/50" href="#hireme">
+         Hire Me
+        </a>
+       </div>
+       <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
+        <img alt="Man with laptop working as software developer in modern office environment, focused and professional" class="rounded-3xl max-w-full h-auto" height="400" src="https://storage.googleapis.com/a1aa/image/2d7a8d7e-0b0f-4049-73e0-8661652a7164.jpg" width="600"/>
+       </div>
+      </div>
+      <div class="min-w-full flex-shrink-0 flex flex-col md:flex-row items-center bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 p-10 md:p-20 text-white">
+       <div class="md:w-1/2 text-center md:text-left space-y-6">
+        <h2 class="text-5xl font-extrabold tracking-tight">
+         Frontend Developer
+        </h2>
+        <p class="text-lg md:text-xl leading-relaxed">
+         Building responsive, performant, and accessible web applications using modern technologies.
+        </p>
+        <a class="inline-block mt-4 px-8 py-3 rounded-full bg-pink-800 hover:bg-pink-900 transition-colors font-semibold shadow-lg shadow-pink-700/50" href="frontend.html">
+         View Projects &amp; Resume
+        </a>
+       </div>
+       <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
+        <img alt="Frontend developer coding on multiple monitors with colorful code editor, modern workspace" class="rounded-3xl max-w-full h-auto" height="400" src="https://storage.googleapis.com/a1aa/image/1c623f21-a9db-4a62-266f-aac5b463cd72.jpg" width="600"/>
+       </div>
+      </div>
+      <div class="min-w-full flex-shrink-0 flex flex-col md:flex-row items-center bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 p-10 md:p-20 text-white">
+       <div class="md:w-1/2 text-center md:text-left space-y-6">
+        <h2 class="text-5xl font-extrabold tracking-tight">
+         UI &amp; UX Designer
+        </h2>
+        <p class="text-lg md:text-xl leading-relaxed">
+         Designing intuitive and engaging user interfaces with a user-centered approach.
+        </p>
+        <a class="inline-block mt-4 px-8 py-3 rounded-full bg-pink-800 hover:bg-pink-900 transition-colors font-semibold shadow-lg shadow-pink-700/50" href="uiux.html">
+         View Projects &amp; Resume
+        </a>
+       </div>
+       <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
+        <img alt="Designer working on UI UX wireframes and prototypes on computer, modern creative workspace with sketches and notes" class="rounded-3xl max-w-full h-auto" height="400" src="https://storage.googleapis.com/a1aa/image/280c47d3-2075-4d38-2948-5b2001edc116.jpg" width="600"/>
+       </div>
+      </div>
+      <div class="min-w-full flex-shrink-0 flex flex-col md:flex-row items-center bg-gradient-to-r from-pink-600 via-indigo-600 to-purple-600 p-10 md:p-20 text-white">
+       <div class="md:w-1/2 text-center md:text-left space-y-6">
+        <h2 class="text-5xl font-extrabold tracking-tight">
+         Graphic Designer
+        </h2>
+        <p class="text-lg md:text-xl leading-relaxed">
+         Creating colorful digital art and branding materials to elevate your brand.
+        </p>
+        <a class="inline-block mt-4 px-8 py-3 rounded-full bg-pink-800 hover:bg-pink-900 transition-colors font-semibold shadow-lg shadow-pink-700/50" href="graphic.html">
+         View Projects &amp; Resume
+        </a>
+       </div>
+       <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
+        <img alt="Graphic designer creating colorful digital art and branding materials on a tablet, creative studio environment" class="rounded-3xl max-w-full h-auto" height="400" src="https://storage.googleapis.com/a1aa/image/aace44b3-d6d4-4ee5-bb60-1776ebaafb1a.jpg" width="600"/>
+       </div>
+      </div>
+     </div>
+     <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-4 z-10">
+      <button aria-label="Slide 1" class="w-4 h-4 rounded-full bg-pink-400 opacity-100" data-slide="0" type="button">
+      </button>
+      <button aria-label="Slide 2" class="w-4 h-4 rounded-full bg-pink-400 opacity-50 hover:opacity-100 transition-opacity" data-slide="1" type="button">
+      </button>
+      <button aria-label="Slide 3" class="w-4 h-4 rounded-full bg-pink-400 opacity-50 hover:opacity-100 transition-opacity" data-slide="2" type="button">
+      </button>
+      <button aria-label="Slide 4" class="w-4 h-4 rounded-full bg-pink-400 opacity-50 hover:opacity-100 transition-opacity" data-slide="3" type="button">
+      </button>
+     </div>
+    </div>
+   </div>
+  </section>
+        <marquee behavior="" direction="" style="background-color: red; font-weight: bold; color: white;">Welcome to Vijai Prakash Upadhya Portfolio </marquee>
+
+  <section class="max-w-7xl mx-auto px-6 md:px-12 py-20" id="about">
+    
+   <h2 class="text-4xl font-extrabold text-pink-500 mb-8 text-center">
+    About Me
+   </h2>
+   <div class="flex flex-col md:flex-row items-center gap-10">
+    <img alt="Portrait of young professional developer smiling confidently, wearing casual modern clothes" class="rounded-3xl shadow-lg w-72 md:w-96 mx-auto" height="400" src="img/vijai.png" width="400"/>
+    <div class="text-gray-300 max-w-xl space-y-6 text-center md:text-left">
+     <p>
+      Hello! I'm Vijai Prakash Upadhya and I'm a passionate developer and designer with expertise in frontend development, UI/UX design, and graphic design. I love turning ideas into beautiful, user-friendly digital products.
+     </p>
+     <p>
+      With years of experience working on diverse projects, I bring creativity, technical skills, and a user-centered approach to every project I undertake.
+     </p>
+     <p>
+      Let's create something amazing together!
+     </p>
+    </div>
+   </div>
+  </section>
+  <section class="bg-gradient-to-r from-pink-700 via-purple-700 to-indigo-700 dark:from-pink-900 dark:via-purple-900 dark:to-indigo-900 py-20 px-6 md:px-12" id="frontend">
+   <h2 class="text-4xl font-extrabold text-white mb-8 text-center">
+    Frontend Developer
+   </h2>
+   <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <img alt="Developer coding frontend with multiple screens showing code and design, modern workspace with colorful lighting" class="rounded-3xl shadow-lg mx-auto" height="350" src="https://storage.googleapis.com/a1aa/image/60a0d3ed-1a27-459b-93f4-0f1eae3a7d05.jpg" width="500"/>
+    <div class="text-white space-y-6">
+     <p>
+      I specialize in building responsive, performant, and accessible web applications using modern technologies like React, Vue, and Tailwind CSS.
+     </p>
+     <p>
+      My focus is on creating seamless user experiences with clean, maintainable code and pixel-perfect designs.
+     </p>
+     <ul class="list-disc list-inside space-y-2">
+      <li>
+       React, Vue.js, Angular
+      </li>
+      <li>
+       Tailwind CSS, Sass, CSS3
+      </li>
+      <li>
+       JavaScript (ES6+), TypeScript
+      </li>
+      <li>
+       Responsive &amp; Mobile-first Design
+      </li>
+      <li>
+       Performance Optimization &amp; SEO
+      </li>
+     </ul>
+     <a class="inline-block mt-4 px-6 py-3 rounded-full bg-pink-600 hover:bg-pink-700 transition-colors font-semibold text-white shadow-lg shadow-pink-500/50" href="frontend.html">
+      View Projects &amp; Resume
+     </a>
+    </div>
+   </div>
+  </section>
+  <section class="py-20 px-6 md:px-12 max-w-7xl mx-auto" id="uiux">
+   <h2 class="text-4xl font-extrabold text-pink-500 mb-8 text-center">
+    UI &amp; UX Designer
+   </h2>
+   <div class="flex flex-col md:flex-row items-center gap-12">
+    <div class="md:w-1/2 space-y-6 text-gray-800 dark:text-gray-300">
+     <p>
+      Designing intuitive and engaging user interfaces is my passion. I focus on user-centered design principles to create products that are both beautiful and easy to use.
+     </p>
+     <p>
+      From wireframes to prototypes, I ensure every detail enhances the user journey and meets business goals.
+     </p>
+     <ul class="list-disc list-inside space-y-2">
+      <li>
+       User Research &amp; Personas
+      </li>
+      <li>
+       Wireframing &amp; Prototyping (Figma, Adobe XD)
+      </li>
+      <li>
+       Interaction &amp; Visual Design
+      </li>
+      <li>
+       Usability Testing &amp; Feedback
+      </li>
+      <li>
+       Design Systems &amp; Style Guides
+      </li>
+     </ul>
+     <a class="inline-block mt-4 px-6 py-3 rounded-full bg-pink-600 hover:bg-pink-700 transition-colors font-semibold text-white shadow-lg shadow-pink-500/50" href="uiux.html">
+      View Projects &amp; Resume
+     </a>
+    </div>
+    <img alt="Designer working on UI UX wireframes and prototypes on computer, modern creative workspace with sketches and notes" class="rounded-3xl shadow-lg md:w-1/2 mx-auto" height="350" src="https://storage.googleapis.com/a1aa/image/c1de9972-0769-4ae0-4338-f0eecab26a1b.jpg" width="500"/>
+   </div>
+  </section>
+  <section class="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 dark:from-gray-900 dark:via-gray-800 dark:to-black py-20 px-6 md:px-12" id="graphic">
+   <h2 class="text-4xl font-extrabold text-pink-400 mb-8 text-center">
+    Graphic Designer
+   </h2>
+   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-pink-500 transition-shadow cursor-pointer">
+     <img alt="Creative logo design with modern typography and colorful elements on white background" class="rounded-xl mb-4" height="300" src="https://storage.googleapis.com/a1aa/image/06d71cf4-ec38-44c4-b1d2-d6e01c32c999.jpg" width="400"/>
+     <h3 class="text-xl font-semibold text-pink-400 mb-2">
+      Logo Design
+     </h3>
+     <p class="text-gray-300">
+      Crafting unique and memorable logos that represent your brand identity perfectly.
+     </p>
+    </div>
+    <div class="bg-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-pink-500 transition-shadow cursor-pointer">
+     <img alt="Vibrant poster design with bold typography and dynamic composition in bright colors" class="rounded-xl mb-4" height="300" src="https://storage.googleapis.com/a1aa/image/16444f3c-c1e9-4e0f-3978-8793c8499af8.jpg" width="400"/>
+     <h3 class="text-xl font-semibold text-pink-400 mb-2">
+      Poster Design
+     </h3>
+     <p class="text-gray-300">
+      Designing eye-catching posters that communicate your message effectively and creatively.
+     </p>
+    </div>
+    <div class="bg-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-pink-500 transition-shadow cursor-pointer">
+     <img alt="Social media graphics with modern style and engaging visuals for marketing campaigns" class="rounded-xl mb-4" height="300" src="https://storage.googleapis.com/a1aa/image/7caa464e-632a-4d9c-cd4d-d6c534f916af.jpg" width="400"/>
+     <h3 class="text-xl font-semibold text-pink-400 mb-2">
+      Social Media Graphics
+     </h3>
+     <p class="text-gray-300">
+      Creating vibrant and shareable social media visuals to boost your online presence.
+     </p>
+    </div>
+   </div>
+   <div class="text-center mt-10">
+    <a class="inline-block px-6 py-3 rounded-full bg-pink-600 hover:bg-pink-700 transition-colors font-semibold text-white shadow-lg shadow-pink-500/50" href="graphic.html">
+     View Projects &amp; Resume
+    </a>
+   </div>
+  </section>
+  <section class="py-20 px-6 md:px-12 max-w-4xl mx-auto" id="contactus">
+   <h2 class="text-4xl font-extrabold text-pink-500 mb-8 text-center">
+    Contact Us
+   </h2>
+   <form action="#" class="bg-gray-800 rounded-3xl p-8 shadow-lg space-y-6" method="POST">
+    <div>
+     <label class="block text-gray-300 mb-2 font-medium" for="name">
+      Name
+     </label>
+     <input class="w-full rounded-lg px-4 py-3 bg-gray-900 border border-gray-700 focus:border-pink-500 focus:ring-2 focus:ring-pink-400 text-gray-100 transition" id="name" name="name" placeholder="Your full name" required="" type="text"/>
+    </div>
+    <div>
+     <label class="block text-gray-300 mb-2 font-medium" for="email">
+      Email
+     </label>
+     <input class="w-full rounded-lg px-4 py-3 bg-gray-900 border border-gray-700 focus:border-pink-500 focus:ring-2 focus:ring-pink-400 text-gray-100 transition" id="email" name="email" placeholder="you@example.com" required="" type="email"/>
+    </div>
+    <div>
+     <label class="block text-gray-300 mb-2 font-medium" for="message">
+      Message
+     </label>
+     <textarea class="w-full rounded-lg px-4 py-3 bg-gray-900 border border-gray-700 focus:border-pink-500 focus:ring-2 focus:ring-pink-400 text-gray-100 transition" id="message" name="message" placeholder="Write your message here..." required="" rows="5"></textarea>
+    </div>
+    <button class="w-full bg-pink-600 hover:bg-pink-700 transition-colors text-white font-semibold py-3 rounded-full shadow-lg shadow-pink-500/50" type="submit">
+     Send Message
+    </button>
+   </form>
+  </section>
+  <section class="bg-gradient-to-r from-pink-700 via-purple-700 to-indigo-700 dark:from-pink-900 dark:via-purple-900 dark:to-indigo-900 py-20 px-6 md:px-12 text-center" id="hireme">
+   <h2 class="text-4xl font-extrabold text-white mb-6">
+    Looking to Hire a Talented Developer &amp; Designer?
+   </h2>
+   <p class="text-white max-w-3xl mx-auto mb-8 text-lg">
+    I am available for freelance projects, full-time roles, and collaborations. Let's build something amazing together!
+   </p>
+   <a class="inline-block px-10 py-4 rounded-full bg-pink-600 hover:bg-pink-700 transition-colors font-semibold text-white shadow-lg shadow-pink-500/50" href="#contactus">
+    Contact Me Now
+   </a>
+   <br><br><br>
+   
+   <div class="flex justify-center space-x-8 text-white text-2xl">
+      <a
+        href="vijayupadhyay1120@gmail.com"
+        aria-label="Send Email"
+        class="hover:text-pink-300 transition-colors"
+        ><i class="fas fa-envelope"></i
+      ></a>
+      <a
+        href="https://www.linkedin.com/feed/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn Profile"
+        class="hover:text-pink-300 transition-colors"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+      <a
+        href="https://github.com/vijaiweb/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub Profile"
+        class="hover:text-pink-300 transition-colors"
+        ><i class="fab fa-github"></i
+      ></a>
+      <a
+        href="https://twitter.com/yourhandle"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Twitter Profile"
+        class="hover:text-pink-300 transition-colors"
+        ><i class="fab fa-twitter"></i
+      ></a>
+      </div>
+  </section>
+  <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm">
+   © 2025 Vijai Prakash Upadhya. All rights reserved.
+  </footer>
+  <script>
+   // Dark mode toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const mobileDarkModeToggle = document.getElementById('mobileDarkModeToggle');
+    const body = document.getElementById('body');
+    const darkModeIcon = document.getElementById('darkModeIcon');
+
+    function setDarkMode(isDark) {
+      if (isDark) {
+        body.classList.add('dark');
+        body.classList.remove('bg-gray-100');
+        body.classList.add('bg-gray-900');
+        darkModeIcon.classList.remove('fa-moon');
+        darkModeIcon.classList.add('fa-sun');
+        localStorage.setItem('darkMode', 'true');
+      } else {
+        body.classList.remove('dark');
+        body.classList.remove('bg-gray-900');
+        body.classList.add('bg-gray-100');
+        darkModeIcon.classList.remove('fa-sun');
+        darkModeIcon.classList.add('fa-moon');
+        localStorage.setItem('darkMode', 'false');
+      }
+    }
+
+    // Initialize dark mode based on preference or localStorage
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const storedDarkMode = localStorage.getItem('darkMode');
+    if (storedDarkMode === 'true' || (storedDarkMode === null && prefersDark)) {
+      setDarkMode(true);
+    } else {
+      setDarkMode(false);
+    }
+
+    darkModeToggle.addEventListener('click', () => {
+      const isDark = body.classList.contains('dark');
+      setDarkMode(!isDark);
+    });
+
+    mobileDarkModeToggle.addEventListener('click', () => {
+      const isDark = body.classList.contains('dark');
+      setDarkMode(!isDark);
+    });
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // New slider logic
+    const sliderTrack = document.getElementById('sliderTrack');
+    const sliderButtons = document.querySelectorAll('[data-slide]');
+    const totalSlides = sliderButtons.length;
+    let currentIndex = 0;
+    let slideWidthPercent = 100;
+
+    function goToSlide(index) {
+      if (index < 0) index = totalSlides - 1;
+      if (index >= totalSlides) index = 0;
+      currentIndex = index;
+      sliderTrack.style.transform = `translateX(-${slideWidthPercent * currentIndex}%)`;
+      sliderButtons.forEach((btn, i) => {
+        if(i === currentIndex){
+          btn.classList.add('opacity-100');
+          btn.classList.remove('opacity-50');
+        } else {
+          btn.classList.remove('opacity-100');
+          btn.classList.add('opacity-50');
+        }
+      });
+    }
+
+    sliderButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        goToSlide(parseInt(btn.dataset.slide));
+        resetAutoSlide();
+      });
+    });
+
+    function nextSlide() {
+      goToSlide(currentIndex + 1);
+    }
+
+    let autoSlideInterval = setInterval(nextSlide, 6000);
+
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = setInterval(nextSlide, 6000);
+    }
+
+    goToSlide(0);
+  </script>
+ </body>
+</html>
